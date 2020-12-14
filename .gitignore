@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+*.idea
+/cyclic-dependency/cmake-build-debug/
+/cyclic-dependency/smart_pointer/
+/.gitignore.swp
