@@ -1,6 +1,0 @@
-cmake_minimum_required(VERSION 2.8.9)
-project (cyclic-dependency)
-add_executable(cyclic-dependency cyclic_dependency.cpp)
-add_executable(shared_pointer shared_pointer.cpp)
-add_executable(unique_pointer unique_pointer.cpp)
-add_executable(weak_pointer weak_pointer.cpp)

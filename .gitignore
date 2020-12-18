@@ -34,3 +34,4 @@
 /cyclic-dependency/cmake-build-debug/
 /cyclic-dependency/smart_pointer/
 /.gitignore.swp
+/cmake-build-debug/
