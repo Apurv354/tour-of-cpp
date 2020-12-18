@@ -11,25 +11,28 @@ class Apurv {
 public:
     static void output()
     {
-        cout << "Value::show()" << endl;
+        cout << "Value for pointer" << endl;
     }
 };
 
 int main()
 {
+    //Create a Shared Pointer
     shared_ptr<Apurv> p1(new Apurv);
-    cout << p1.get() << endl;
+    cout << "Memory Address for 1st Pointer" << p1.get() << endl;
     p1->output();
+
+    //Create a Second Shared Pointer
     shared_ptr<Apurv> p2(p1);
     p2->output();
-    cout << p1.get() << endl;
-    cout << p2.get() << endl;
-    cout << p1.use_count() << endl;
-    cout << p2.use_count() << endl;
+    cout << "Memory Address for 1st Pointer - " << p1.get() << endl;
+    cout << "Memory Address for 2nd Pointer - " << p2.get() << endl;
+    cout << "Reference counter for 1st Pointer - " << p1.use_count() << endl;
+    cout << "Reference counter for 2nd Pointer - " << p2.use_count() << endl;
     p1.reset();
-    cout << p1.get() << endl;
-    cout << p2.use_count() << endl;
-    cout << p2.get() << endl;
+    cout << "Memory Address for 1st Pointer - " << p1.get() << endl;
+    cout << "Reference counter for 2nd Pointer - " << p2.use_count() << endl;
+    cout << "Memory Address for 2nd Pointer - " << p2.get() << endl;
 
     return 0;
 }
